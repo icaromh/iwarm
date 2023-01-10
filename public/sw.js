@@ -9,6 +9,7 @@ const precachedAssets = [
   "images/categories/airport.svg",
   "images/categories/bakery.svg",
   "images/categories/bar.svg",
+  "images/categories/beauty_salon.svg",
   "images/categories/book_store.svg",
   "images/categories/cafe.svg",
   "images/categories/clothing_store.svg",
@@ -18,6 +19,7 @@ const precachedAssets = [
   "images/categories/home_goods_store.svg",
   "images/categories/locality.svg",
   "images/categories/lodging.svg",
+  "images/categories/movie_theater.svg",
   "images/categories/museum.svg",
   "images/categories/natural_feature.svg",
   "images/categories/neighborhood.svg",
@@ -29,6 +31,7 @@ const precachedAssets = [
   "images/categories/route.svg",
   "images/categories/shop.svg",
   "images/categories/store.svg",
+  "images/categories/sublocality_level_1.svg",
   "images/categories/tourist_attraction.svg",
   "images/categories/transit_station.svg",
 ];
