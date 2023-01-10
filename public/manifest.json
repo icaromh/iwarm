@@ -1,11 +1,11 @@
 {
-  "name": "Swarm Clone",
-  "short_name": "Swarm Clone",
+  "name": "iWarm",
+  "short_name": "iWarm",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#ffa632",
   "theme_color": "#ffa632",
-  "description": "Simple Swarm Clone",
+  "description": "Save your check-ins on Notion",
   "icons": [
     {
       "src": "/images/android-chrome-192x192.png",
