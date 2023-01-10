@@ -17,6 +17,7 @@
   padding: 1rem;
   padding-left: 2.5rem;
   padding-right: 3rem;
+  font-size: 1.2rem;
 }
 
 .search::placeholder {
