@@ -27,10 +27,7 @@ a {
 }
 
 #__next {
-  max-width: 720px;
-  margin: 0 auto;
   display:grid;
   height: 100vh;
   height: 100dvh;
-  box-shadow: 0px 0px 10px 1px #676767;
 }
