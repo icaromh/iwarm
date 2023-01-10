@@ -1,0 +1,62 @@
+.placesList {
+  padding: 1rem;
+  display: grid;
+  align-content: baseline;
+  overflow: auto;
+}
+
+.placesListItem {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+  border-bottom: 1px solid #c2c2c2;
+}
+
+.placeDetails {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: .2rem;
+  flex-grow: 1;
+}
+
+.placeImage {
+  display: flex;
+  justify-content: center;
+  padding: .5rem;
+  align-items: center;
+}
+
+.placeImage img {
+  filter: brightness(0);
+  opacity: .5;
+}
+
+.placeName {
+  color: #080809;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.placeAddress {
+  color: #6a6a6a;
+  font-size: 0.8rem;
+}
+
+.placeDetailsBottom {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.placeRating {
+  color: #6a6a6a;
+  font-size: 0.8rem;
+}
+
+.placeButtonRegion {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  min-width: fit-content;
+}

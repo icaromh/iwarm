@@ -1,0 +1,17 @@
+.wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
+  gap: 1rem;
+}
+
+.icon {
+  height: 5rem;
+  width: 5rem;
+}
+
+.title {
+  font-size: 2rem;
+}

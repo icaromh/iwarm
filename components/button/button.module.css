@@ -1,0 +1,27 @@
+.primaryButton {
+  padding: 0.4rem 1.5rem;
+  background-color: #2082eb;
+  border: 0;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.primaryButton:disabled {
+  background-color: #ccc;
+}
+
+.square {
+  padding: 0;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #2082eb;
+  background-color: transparent;
+}
+
+.primaryButton + .primaryButton {
+  margin-left: .5rem;
+}
