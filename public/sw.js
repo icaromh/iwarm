@@ -48,7 +48,7 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(event.request.url);
   const isPrecachedRequest = precachedAssets.includes(url.pathname);
 
-  // When make a new checkin remove the cached result for places
+  // When make a new check in remove the cached result for places
   if (url.pathname === "/api/place") {
     caches.open(cacheName).then((cache) => {
       return cache.delete("/api/places");
