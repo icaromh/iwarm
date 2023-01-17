@@ -8,13 +8,12 @@ import { transformReqToPlace } from "./transformers/place";
 
 const NotionClient = new Notion();
 
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  const place = transformReqToPlace(req.body)
-  
-  NotionClient.checkIn(place).then((res: any) => {
-    res.status(200).json(res);
-  });
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const place = transformReqToPlace(req.body);
+
+  NotionClient.checkIn(place)
+    .then((data: any) => {
+      res.status(200).json(data);
+    })
+    .catch((err) => console.log(err));
 }

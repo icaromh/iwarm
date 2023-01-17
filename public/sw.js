@@ -1,5 +1,5 @@
 // Establish a cache name
-const id = 18;
+const id = 19;
 const cacheName = "SwarmCache_v" + id;
 
 const precachedAssets = [

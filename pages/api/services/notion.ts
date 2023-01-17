@@ -40,7 +40,7 @@ export default class Notion {
 
   async checkIn(place: any) {
     try {
-      this.client?.pages.create({
+      const response = this.client?.pages.create({
         parent: { database_id: NOTION_PLACES_TABLE_ID },
         properties: {
           title: {
@@ -120,7 +120,7 @@ export default class Notion {
           },
         },
       });
-      console.log("Created :D");
+      return response
     } catch (error) {
       console.log("caiu no erro");
       console.error(error);
