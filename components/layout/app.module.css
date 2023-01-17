@@ -19,6 +19,12 @@
   color: white;
   font-size: 1.5rem;
   text-align: center;
+  flex-grow: 1;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 50px auto 50px;
 }
 
 .appContent {
