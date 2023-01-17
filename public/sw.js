@@ -3,7 +3,6 @@ const id = 19;
 const cacheName = "SwarmCache_v" + id;
 
 const precachedAssets = [
-  "/api/places",
   "images/categories/administrative_area_level_2.svg",
   "images/categories/administrative_area_level_3.svg",
   "images/categories/airport.svg",
@@ -49,11 +48,11 @@ self.addEventListener("fetch", (event) => {
   const isPrecachedRequest = precachedAssets.includes(url.pathname);
 
   // When make a new check in remove the cached result for places
-  if (url.pathname === "/api/place") {
-    caches.open(cacheName).then((cache) => {
-      return cache.delete("/api/places");
-    });
-  }
+  // if (url.pathname === "/api/place") {
+  //   caches.open(cacheName).then((cache) => {
+  //     return cache.delete("/api/places");
+  //   });
+  // }
 
   if (isPrecachedRequest) {
     event.respondWith(
