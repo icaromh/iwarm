@@ -7,17 +7,17 @@ import AppLayout, {
   AppLayoutHeader,
 } from "../components/layout/app";
 import LoadingMessage from "../components/loading";
-import EmptyWidget from "../components/empyWidget";
+import EmptyWidget from "../components/emptyWidget";
 import useGeoLocation from "../hooks/useGeoLocation";
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 export default function Home() {
   const { data, error, isLoading } = useSWR("/api/places", fetcher);
-  const { hasLocation } = useGeoLocation()
+  const { hasLocation } = useGeoLocation();
 
-  const isEmpty = !isLoading && data?.length === 0
-  const hasPlaces = !isLoading && data
+  const isEmpty = !isLoading && data?.length === 0;
+  const hasPlaces = !isLoading && data;
 
   return (
     <>

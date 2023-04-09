@@ -21,6 +21,12 @@ export default class Notion {
   async getPlaces() {
     if (!this.client) throw new Error("Notion client must be initialized");
 
+    const getLast14Days = () => {
+      let d = new Date();
+      d.setDate(d.getDate() - 14);
+      return d.toISOString();
+    };
+
     try {
       return this.client.databases.query({
         database_id: NOTION_PLACES_TABLE_ID,
@@ -30,6 +36,12 @@ export default class Notion {
             direction: "descending",
           },
         ],
+        filter: {
+          property: "created_at",
+          date: {
+            on_or_after: getLast14Days(),
+          },
+        },
       });
     } catch (error) {
       console.log("caiu no erro");
@@ -56,7 +68,7 @@ export default class Notion {
             rich_text: [
               {
                 text: {
-                  content: JSON.stringify(place)
+                  content: JSON.stringify(place),
                 },
               },
             ],
@@ -120,7 +132,7 @@ export default class Notion {
           },
         },
       });
-      return response
+      return response;
     } catch (error) {
       console.log("caiu no erro");
       console.error(error);
